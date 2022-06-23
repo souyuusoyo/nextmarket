@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head></head>
+
+<body>
+    <h1>データ入力窓口</h1>
+    <form action="http://localhost:3000/api/item/create" method="POST">
+        タイトル：<input type="text" name="title">
+        イメージ：<input type="text" name="image">
+        価格：<input type="text" name="price">
+        説明：<textarea name="description"></textarea>
+        メールアドレス：<input type="text" name="email">
+        <button type="submit">投稿</button>
+    </form>
+    <h1>データ更新窓口</h1>
+    <form action="http://localhost:3000/api/item/update/62b3cdc3ebe7b451d37c3f4c" method="POST">
+        タイトル：<input type="text" name="title">
+        イメージ：<input type="text" name="image">
+        価格：<input type="text" name="price">
+        説明：<textarea name="description"></textarea>
+        メールアドレス：<input type="text" name="email">
+        <button type="submit">更新</button>
+    </form>
+    <h1>データ削除窓口</h1>
+    <form action="http://localhost:3000/api/item/delete/62b298528e361990d47494cc" method="POST">
+        <button type="submit">削除</button>
+    </form>
+</body>
+
+</html>
