@@ -1,8 +1,10 @@
 import Image from "next/image"
 import useAuth from "../../../utils/useAuth"
 import Head from "next/head"
+import { useRouter } from "next/router"
 
 const UpdateItem = (props) => {
+    const router = useRouter()
 
     const handlerSubmit = async (e) => {
         e.preventDefault()

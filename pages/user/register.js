@@ -1,8 +1,10 @@
 import { useState } from "react"
 import Head from "next/head"
-import router from "next/router"
+import { useRouter } from "next/router"
 
 const Register = () => {
+    const router = useRouter()
+
     const [newUser, setNewUser] = useState({
         name: "",
         email: "",

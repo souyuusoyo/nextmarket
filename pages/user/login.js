@@ -1,8 +1,10 @@
-import { router } from "next/router"
 import { useState } from "react"
 import Head from "next/head"
+import { useRouter } from "next/router"
 
 const Login = () => {
+    const router = useRouter()
+
     const [user, setUser] = useState({
         email: "",
         password: "",

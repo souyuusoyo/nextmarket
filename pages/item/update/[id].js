@@ -1,8 +1,11 @@
 import { useState } from "react"
 import useAuth from "../../../utils/useAuth"
 import Head from "next/head"
+import { useRouter } from "next/router"
 
 const UpdateItem = (props) => {
+    const router = useRouter()
+
     const [item, setItem] = useState({
         title: props.singleItem.title,
         price: props.singleItem.price,

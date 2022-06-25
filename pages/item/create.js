@@ -1,8 +1,11 @@
 import { useState } from "react"
 import useAuth from "../../utils/useAuth"
 import Head from "next/head"
+import { useRouter } from "next/router"
 
 const CreateItem = () => {
+    const router = useRouter()
+
     const [item, setItem] = useState({
         title: "",
         price: "",
