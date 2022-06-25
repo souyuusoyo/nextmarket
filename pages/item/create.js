@@ -2,6 +2,7 @@ import { useState } from "react"
 import useAuth from "../../utils/useAuth"
 import Head from "next/head"
 import { useRouter } from "next/router"
+import ImgInput from "../../components/imgInput"
 
 const CreateItem = () => {
     const router = useRouter()
@@ -49,6 +50,7 @@ const CreateItem = () => {
             <div>
                 <Head><title>アイテム作成</title></Head>
                 <h1 className="page-title">アイテム作成</h1>
+                <ImgInput image={item.image} setItem={setItem} />
                 <form onSubmit={handlerSubmit}>
                     <input value={item.title} onChange={handlerChange} type="text" name="title" placeholder="アイテム名" required />
                     <input value={item.price} onChange={handlerChange} type="text" name="price" placeholder="価格" required />
