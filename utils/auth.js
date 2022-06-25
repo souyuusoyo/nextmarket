@@ -1,7 +1,7 @@
 import jwt from "jsonwebtoken"
 
 const secret_key = "nextmarket"
-const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhvZ2VAZXhhbXBsZS5jb20iLCJpYXQiOjE2NTU5NDgxMzksImV4cCI6MTY1NjAzMDkzOX0.xE1xposcMrCoFtipWOxeU-uJPbFJ6S6cqEin1gVFA_g"
+// const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZXhhbXBsZS5jb20iLCJpYXQiOjE2NTU5NjA3NjksImV4cCI6MTY1NjA0MzU2OX0.cNM2AYll64AZisObdixA3f9ZKEYITdgSKuXTzmH4r5E"
 
 const auth = (handler) => {
 
@@ -10,7 +10,7 @@ const auth = (handler) => {
             return handler(req, res)
         }
 
-        // const token = await req.headers.authorization.split(" ")[1]
+        const token = await req.headers.authorization.split(" ")[1]
         if (!token) {
             return res.status(401).json({ message: "トークンがありません" })
         }
